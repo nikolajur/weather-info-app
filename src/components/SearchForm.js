@@ -7,7 +7,7 @@ const SearchForm = () => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    const searchedText = inputRef.current.value;
+    const searchedText = inputRef.current.value.trim();
     ctx.getCoordinates("search", searchedText, null);
     inputRef.current.value = null;
   };
